@@ -1,0 +1,19 @@
+app = "bot-trading-flyio"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[env]
+  BINANCE_API_KEY = ""
+  BINANCE_SECRET_KEY = ""
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
