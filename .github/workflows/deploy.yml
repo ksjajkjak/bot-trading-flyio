@@ -1,0 +1,23 @@
+name: 🚀 Deploy Fly.io Bot
+
+on:
+  push:
+    branches:
+      - main  # O cambia a tu rama principal si no es 'main'
+
+jobs:
+  deploy:
+    name: 📦 Deploy to Fly.io
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: 🔐 Instalar Fly.io CLI
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: 🚀 Desplegar en Fly.io
+        run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
