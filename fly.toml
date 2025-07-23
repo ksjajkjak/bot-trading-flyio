@@ -6,7 +6,11 @@
 app = 'bot-trading-flyio'
 primary_region = 'ord'
 
+[env] 
+   PORT = "8080"
+
 [build]
+   dockerfile = "Dockerfile"
 
 [http_service]
   internal_port = 8080
