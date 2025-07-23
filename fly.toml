@@ -4,7 +4,7 @@
 #
 
 app = 'bot-trading-flyio'
-primary_region = 'mex'
+primary_region = 'gdl'
 
 [env] 
    PORT = '8080'
