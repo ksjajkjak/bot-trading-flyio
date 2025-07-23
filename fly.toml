@@ -4,13 +4,13 @@
 #
 
 app = 'bot-trading-flyio'
-primary_region = 'ord'
+primary_region = 'mex'
 
 [env] 
-   PORT = "8080"
+   PORT = '8080'
 
 [build]
-   dockerfile = "Dockerfile"
+   dockerfile = 'Dockerfile'
 
 [http_service]
   internal_port = 8080
@@ -28,8 +28,8 @@ primary_region = 'ord'
 
 [checks]
   [checks.bot_health]
-    grace_period = "30s"
-    interval = "15s"
+    grace_period = '30s'
+    interval = '15s'
     port = 8080
-    timeout = "10s"
-    type = "tcp"
+    timeout = '10s'
+    type = 'tcp'
