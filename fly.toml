@@ -25,3 +25,11 @@ primary_region = 'ord'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
+
+[checks]
+  [checks.bot_health]
+    grace_period = "30s"
+    interval = "15s"
+    port = 8080
+    timeout = "10s"
+    type = "tcp"
